@@ -3,8 +3,14 @@ import React from 'react';
 
 export const fetchAllPokemon = () => (
   $.ajax({
-    //FRANCIS
     url: '/api/pokemon',
+    method: 'GET'
+  })
+);
+
+export const fetchOnePokemon = (id) => (
+  $.ajax({
+    url: `/api/pokemon/${id}`,
     method: 'GET'
   })
 );
